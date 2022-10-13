@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    height: auto;
+    width: 800px;
+    
+}
+.container2{
+    display: flex;
+    height: auto;
+    width: 800px;
+  
+}
+div{
+    display: grid;
+    background-color: rgb(102, 156, 203);
+    border: black solid 1px;
+    width: 400px;
+}
+body{
+    justify-content: center;
+    background-color: black;
+    display: grid;
+    
+}
+.cab{
+    background-color: aliceblue;
+}
+#corpoTabela{
+    background-color: aliceblue;
+}
+#corpoTabelapr{
+    background-color: rgb(255, 255, 255);
+}
+#tabelaCorpo{
+    background-color: rgb(255, 255, 255);
+}

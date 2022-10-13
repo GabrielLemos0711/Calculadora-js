@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script type="text/javascript" src="function.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <form>
+                <h2>Pessoas:</h2>
+            <p>Nome:     <input type="text" name="" id="nome" placeholder="Nome"></p>
+            <p>Telefone: <input type="text" name="" id="tel" placeholder="Telefone"></p>
+            <p>Crianças: <input type="text" name="" id="cr" placeholder="Crianças"></p>
+                <input type="button" onclick="cadastrarDoacao()" value="Cadastrar">
+            </form>
+        </div>
+        <div>
+            <form>
+                <h2>Ingrdientes:</h2>
+            <p>Ingrediente:     <input type="text" name="" id="ingrediente" placeholder="Nome do produto"></p>
+            <p>Unidade: <input type="text" name="" id="unidade" ></p>
+            <p>Quant. por Adulto: <input type="text" name="" id="qntadulto"></p>
+            <p>Quant. por Crianças: <input type="text" name="" id="quantcr" ></p>
+            <p>valor: <input type="number" name="" id="valor" ></p>
+                <input type="button" onclick="cadastrarvalorproduto()" value="Cadastrar">
+            </form>
+        </div>
+    </div>
+    <div class="container2">
+        <div>
+            <table border="solid">
+                <h2>Total por Pessoa</h2>
+                <thead>
+                    <tr class="cab">
+                        <td>Nome </td>
+                        <td>valor </td>
+                        <td>Excluir </td>
+                    </tr>
+                </thead>
+                <tbody id="tabelaCorpo">
+                </tbody>
+            </table>
+            <table border="solid">
+                <h2>Pessoas e Dependentes</h2>
+                <thead>
+                    <tr class="cab">
+                        <td>Nome</td>
+                        <td>Quantidade Dependentes</td>
+                        <td>Excluir</td>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                </tbody>
+            </table>
+
+            <br>
+            <br>
+        </div>
+            
+        <div>
+            <table border="solid">
+                <h2>Total Necessário : </h2>
+                <thead>
+                    <tr class="cab">
+                        <td>Produto</td>
+                        <td>Quantidade</td>
+                        <td>Excluir</td>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabelapr">
+                </tbody>
+            </table>
+
+            <br>
+            <br>
+
+        </div> 
+    </div>
+</body>
+</html>
