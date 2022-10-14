@@ -54,26 +54,6 @@ function atualizarTabela() {
         tdoacoes += parseFloat(doacao.cr);
         indece ++ ;
     });
-    for (var index = 0; index < doacoes.length; index++) { 
- 
-        var doacao = doacoes[index];
-
-        td1.innerText=doacao.nome;
-        tr.appendChild(td1);
-
-        td3.innerText=doacao.cr;
-        tr.appendChild(td3);
-        var btn = document.createElement('button');
-        btn.innerText="X";
-        btn.value=index;
-        btn.setAttribute("onclick","excluirDoacao(this)")
-        td4.appendChild(btn);
-        tr.appendChild(td4);
-
-        corpoTabela.appendChild(tr);
-        tdoadores++;
-        tdoacoes += parseFloat(doacao.cr);
-    } 
 }
 var listaprodutos = new Array();
 var qtdPessoas = 0;
@@ -109,7 +89,7 @@ function excluirvalorproduto(e) {
 }
 function atualizador() {
 
-    var corpoTabelapr = document.getElementById("corpoTabelapr");
+    //var corpoTabelapr = document.getElementById("corpoTabelapr");
     var tabelaCorpo = document.getElementById("tabelaCorpo");
     corpoTabelapr.innerHTML="";
     tabelaCorpo.innerHTML="";
