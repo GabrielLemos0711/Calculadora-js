@@ -10,11 +10,11 @@ function cadastrarDoacao(){
     doacao.cr = iCr.value;
     doacoes.push(doacao);
     console.log(doacoes);
-    atualizarTabela();
-    atualizador();
     iTel.value="";
     iCr.value="";
     iNome.value="";
+    atualizarTabela();
+    atualizador();
 
 } 
 function excluirDoacao(e) {
