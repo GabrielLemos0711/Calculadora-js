@@ -10,17 +10,18 @@ function cadastrarDoacao(){
     doacao.cr = iCr.value;
     doacoes.push(doacao);
     console.log(doacoes);
+    atualizarTabela();
+    atualizador();
     iTel.value="";
     iCr.value="";
     iNome.value="";
-    atualizarTabela();
-    atualizador();
 
 } 
 function excluirDoacao(e) {
     console.log("Excluindo"+e.value);
     doacoes.splice(e.value,1);
     atualizarTabela();
+    atualizador();
 
 }
 function atualizarTabela() {
@@ -42,12 +43,12 @@ function atualizarTabela() {
 
         td3.innerText=doacao.cr;
         tr.appendChild(td3);
-        var btn = document.createElement('button');
-        btn.innerText="X";
-        btn.value=indece;
-        btn.setAttribute("onclick","excluirDoacao(this)")
-        td4.appendChild(btn);
-        tr.appendChild(td4);
+         var btn = document.createElement('button');
+         btn.innerText="X";
+         btn.value=indece;
+         btn.setAttribute("onclick","excluirDoacao(this)")
+         td4.appendChild(btn);
+         tr.appendChild(td4);
 
         corpoTabela.appendChild(tr);
         tdoadores++;
@@ -85,11 +86,11 @@ function excluirvalorproduto(e) {
     console.log("Excluindo"+e.value);
     listaprodutos.splice(e.value,1);
     atualizador();
-
+    atualizarTabela();
 }
 function atualizador() {
 
-    //var corpoTabelapr = document.getElementById("corpoTabelapr");
+    var corpoTabelapr = document.getElementById("corpoTabelapr");
     var tabelaCorpo = document.getElementById("tabelaCorpo");
     corpoTabelapr.innerHTML="";
     tabelaCorpo.innerHTML="";
@@ -111,8 +112,6 @@ function atualizador() {
     var td4 = document.createElement("td");
         var valorproduto = prod;
         
-        console.log(valorproduto)
-
         td1.innerText=valorproduto.ingrediente;
         tr.appendChild(td1);
 
@@ -122,7 +121,7 @@ function atualizador() {
         var btn = document.createElement('button');
         btn.innerText="X";
         btn.value=index;
-        btn.setAttribute("onclick","excluirvalorproduto(this)")
+        btn.setAttribute("onclick", "excluirvalorproduto(this)")
         td4.appendChild(btn);
         tr.appendChild(td4);
 
@@ -152,14 +151,15 @@ doacoes.forEach(function(conviado){
     tdt2.innerText=vtpessoa.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
     trp.appendChild(tdt2);
 
-    var  btn1 = document.createElement('button');
-        btn1.innerText="X";
-        btn1.value=index;
-        btn1.setAttribute("onclick","excluirvalorproduto(this)")
-        tdt3.appendChild(btn1);
-        trp.appendChild(tdt3);
+    //var  btn1 = document.createElement('button');
+    //    btn1.innerText="X";
+    //    btn1.value=index;
+    //    btn1.setAttribute("onclick", "excluirvalorproduto(this)", "excluirDoacao(this)");
+    //    tdt3.appendChild(btn1);
+    //    trp.appendChild(tdt3);
 
         tabelaCorpo.appendChild(trp);
+       
         
    });
 
